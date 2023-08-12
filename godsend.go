@@ -25,6 +25,11 @@ func getLocalIP() net.IP {
 }
 
 func main() {
+	if len(os.Args) != 2 {
+		fmt.Printf("Usage: %s path/to/file\n", os.Args[0])
+		return
+	}
+
 	// get the file path
 	file := os.Args[1]
 
